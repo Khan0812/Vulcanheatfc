@@ -1,0 +1,282 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* HERO PAGE */
+
+.main{
+    height: 100vh;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header{
+    background-color: hsl(0, 0%, 80%);
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: hsla(215, 92%, 19%, 0.77);
+    text-decoration: none;
+}
+
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.nav-branding{
+    font-size: 2rem;
+    color: hsla(215, 92%, 19%, 0.77);
+}
+
+.nav-link{
+    transition: 0.7s ease;
+}
+
+.nav-link:hover{
+    color: #262626;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: hsla(215, 92%, 19%, 0.77);
+}
+
+@media(max-width:768px) {
+    .hamburger{
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: hsl(0, 0%, 80%);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+    
+}
+
+.logo{
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    filter: drop-shadow(5px 3px 10px hsl(0, 0%, 27%));
+}
+
+@media (max-width: 600px) {
+    .logo{
+        max-width: 150px; /* Smaller on mobile */
+        margin-bottom: 10px;
+    }
+
+    .vhfc{
+        font-size: 22px;
+    }
+
+    .club-moto{
+        font-size: 18px;
+        padding: 5px;
+    }
+
+    .club-description{
+        font-size: 16px;
+        padding: 0 10px;
+        line-height: 1.5;
+    }
+
+    #p1{
+        font-size: 26px;
+    }
+
+    #p2{
+        font-size: 16px;
+    }
+
+    #about{
+        height: auto;
+        padding: 30px 10px;
+    }
+}
+
+#logo-name{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    margin-top: 70px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+}
+
+.vhfc{
+    font-size: 30px;
+    color: hsla(215, 92%, 19%, 0.77);
+    margin-top: -10px;
+}
+
+.club-moto{
+    font-style: italic;
+    font-size: 26px;
+    color: hsla(215, 92%, 19%, 0.77);
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+/* HERO PAGE ENDS HERE */
+
+
+/* ABOUT PAGE  */
+
+
+#about{
+    min-height: 100vh;
+    height: auto;
+    justify-content: center;
+    text-align: center;    
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4)50%, rgba(0, 0, 0, 0.4)50%), url(images/vhfc-jersey-pic.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: hsl(0, 4%, 80%);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.content{
+    border-top: 1px solid white;
+    max-height: 100%;
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+h2{
+    margin-top: 100px;
+    font-size: 30px;
+}
+
+.club-description{
+    margin-top: 50px;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+#p1{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 35px;
+}
+
+#p2{
+    font-size: 20px;
+}
+
+
+/* ABOUT PAGE ENDS HERE */
+
+
+/* FOUNDERS PAGE */
+
+
+#founders{
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.founder-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.founder-card{
+    background-color: #f3f3f3;
+    border-radius: 12px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.founder-card img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+.founder-card h2{
+    margin: 15px 0 10px;
+    font-size: 20px;
+}
+
+.founder-card p{
+    font-size: 14px;
+    color: #444;
+}
+
+/* FOUNDERS PAGE ENDS HERE */
